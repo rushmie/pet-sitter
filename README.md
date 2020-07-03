@@ -1,3 +1,16 @@
+To run front end:
+npm run start
+navigate to localhost:3000/register or localhost:3000/search
+
+To run backend:
+cd server
+./mvnw spring-boot:run
+navigate to localhost:8080/
+
+try get request through Postman to localhost:8080/api/users to view the users database
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
