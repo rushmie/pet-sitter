@@ -1,0 +1,77 @@
+::placeholder {
+    color: black;
+    opacity: 0.6; /* Firefox */
+    font-weight: 500;
+    
+  }
+
+.text.left{
+    margin: 0px;
+    font: inherit;
+    font-size: 2rem;
+}
+
+.register-box {
+    width: 50%;
+}
+
+.register-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    /*font-size: 2rem;*/
+}
+
+.input {
+    font-size: 1.2rem;
+    padding:5px;
+}
+
+.input.long {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.long-line {
+    color: #aaaaaa;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    border-style: solid;
+}
+
+.register-pets-box {
+    min-width: 56%;
+}
+
+.pet-list-item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+}
+
+.number-text {
+    width:50px;
+}
+
+.center-select {
+    font: inherit;
+}
+
+.right-text {
+    grid-column: 3;
+    align-self: center;
+}
+
+.button.right {
+    float: right;
+    margin: 5px 0px;
+}
+
+input {
+    font: inherit;
+}
+
+button {
+    font: inherit;
+}
