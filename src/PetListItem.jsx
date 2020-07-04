@@ -28,6 +28,9 @@ export default class PetListItem extends React.Component {
         this.setState({
             [name] : event.target.value
         });
+
+        this.props.onUpdate(event.target.name, event.target.value, this.props.ListIndex);
+        event.persist();
     }
 
     //render the pet list item with name input, drop down for species, and age number input

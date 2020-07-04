@@ -15,6 +15,7 @@ export default class RegisterPets extends React.Component {
         super(props);
         this.addPet = this.addPet.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onUpdate = this.onUpdate.bind(this);
     }
 
     //add a PetListItem to the list of pets
@@ -32,7 +33,44 @@ export default class RegisterPets extends React.Component {
         });
     }
 
+    onUpdate(field, val, index) {
+        var pets = this.state.pets;
+        pets[index][field] = val;
+
+        this.setState({
+            pets: pets
+        });
+    }
+
     onSubmit(event) {
+        //get username
+        var user = "hmkiesel";
+
+        var petsList = this.state.pets.forEach(pet => {
+            console.log(pet);
+        //post request to send user data to database
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: pet.name,
+                species: pet.species,
+                age: pet.age,
+                username: user
+            })
+        };
+        fetch('http://localhost:8080/api/pets', requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                //this.setState({ postId: data.id })
+                console.log(data.id);
+                console.log(data)
+            });
+        });
+
+            //console.log(this.state.postId);
+        
+
         //navigate to home page
         this.props.history.push('/');
     }
@@ -40,7 +78,7 @@ export default class RegisterPets extends React.Component {
     render() {
         //var pets = this.state.pets;
         var pets = this.state.pets.map(pet => {
-            return <li key={this.state.pets.indexOf(pet)}><PetListItem/></li>;
+            return <li key={this.state.pets.indexOf(pet)}><PetListItem onUpdate={this.onUpdate} ListIndex={this.state.pets.indexOf(pet)}/></li>;
         });
 
         //contains AddPetsList component, which takes pets list as prop

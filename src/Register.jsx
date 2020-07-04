@@ -1,6 +1,6 @@
 import React from 'react';
 import './Register.css';
-import './Sitter.css'
+import './Sitter.css';
 
 export default class Register extends React.Component {
 
@@ -107,27 +107,27 @@ export default class Register extends React.Component {
     //contains inputs for name, username, password, email, phone, and address
     render() {
         return (
-            <div className="register-box">
-                <h1 className="text left">Register</h1>
-                <div className="register-grid">
-                    <hr className="long-line"></hr>
-                    <input className="input" type="text" name="firstName" value={this.state.firstName} onChange={this.inputChanged} placeholder="First Name" ></input>
-                    <input className="input" type="text" name="lastName" value={this.state.lastName} onChange={this.inputChanged} placeholder="Last Name" ></input>
-                    <input className="input" type="text" name="email" value={this.state.email} onChange={this.inputChanged} placeholder="Email" ></input>
-                    <input className="input" type="text" name="username" value={this.state.username} onChange={this.inputChanged} placeholder="Username" ></input>
-                    <input className="input" type="password" name="password" value={this.state.password} onChange={this.inputChanged} placeholder="Password" ></input>
-                    <input className="input" type="password" name="confirmPass" value={this.state.confirmPass} onChange={this.inputChanged} placeholder="Confirm Password" ></input>
-                    <input className="input long" type="text" name="address" value={this.state.address} onChange={this.inputChanged} placeholder="Address" ></input>
-                    <input className="input long" type="text" name="address2" value={this.state.address2} onChange={this.inputChanged} placeholder="Address 2" ></input>
-                    <input className="input" type="text" name="country" value={this.state.country} onChange={this.inputChanged} placeholder="Country" ></input>
-                    <input className="input" type="text" name="city" value={this.state.city} onChange={this.inputChanged} placeholder="City" ></input>
-                    <input className="input" type="text" name="zip" value={this.state.zip} onChange={this.inputChanged} placeholder="Zip Code" ></input>
-                    <input className="input" type="text" name="phone" value={this.state.phone} onChange={this.inputChanged} placeholder="Phone Number" ></input>
-                    <hr className="long-line"></hr>
-                    <button className="button Cancel">Cancel</button>
-                    <button className="button Next" onClick={this.onSubmit}>Next</button>
-                </div>
-            </div>
-        );
+                    <div className="register-box">
+                        <h1 className="text left">Register</h1>
+                        <div className="register-grid">
+                            <hr className="long-line"></hr>
+                            <input className="input" type="text" name="firstName" value={this.state.firstName} onChange={this.inputChanged} placeholder="First Name" ></input>
+                            <input className="input" type="text" name="lastName" value={this.state.lastName} onChange={this.inputChanged} placeholder="Last Name" ></input>
+                            <input className="input" type="text" name="email" value={this.state.email} onChange={this.inputChanged} placeholder="Email" ></input>
+                            <input className="input" type="text" name="username" value={this.state.username} onChange={this.inputChanged} placeholder="Username" ></input>
+                            <input className="input" type="password" name="password" value={this.state.password} onChange={this.inputChanged} placeholder="Password" ></input>
+                            <input className="input" type="password" name="confirmPass" value={this.state.confirmPass} onChange={this.inputChanged} placeholder="Confirm Password" ></input>
+                            <input className="input long" type="text" name="address" value={this.state.address} onChange={this.inputChanged} placeholder="Address" ></input>
+                            <input className="input long" type="text" name="address2" value={this.state.address2} onChange={this.inputChanged} placeholder="Address 2" ></input>
+                            <input className="input" type="text" name="country" value={this.state.country} onChange={this.inputChanged} placeholder="Country" ></input>
+                            <input className="input" type="text" name="city" value={this.state.city} onChange={this.inputChanged} placeholder="City" ></input>
+                            <input className="input" type="text" name="zip" value={this.state.zip} onChange={this.inputChanged} placeholder="Zip Code" ></input>
+                            <input className="input" type="text" name="phone" value={this.state.phone} onChange={this.inputChanged} placeholder="Phone Number" ></input>
+                            <hr className="long-line"></hr>
+                            <button className="button Cancel">Cancel</button>
+                            <button className="button Next" onClick={ this.onSubmit}>Next</button>
+                        </div>
+                    </div>
+        )
     }
 }

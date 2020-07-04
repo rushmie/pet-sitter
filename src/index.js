@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {Route, Link, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 import Register from './Register';
 import RegisterPets from './RegisterPets'
 import SitterSearchPage from './SitterSearchPage';
@@ -20,7 +20,7 @@ const Router = (
     </div>
   </BrowserRouter>
 );
-
+const PetSitterApp = () => (<Router><App/></Router>);
 //render Routes to the root div in index.html
 ReactDOM.render(Router,
   document.getElementById('root')

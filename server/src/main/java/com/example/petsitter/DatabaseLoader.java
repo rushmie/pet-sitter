@@ -12,16 +12,19 @@ import org.springframework.stereotype.Component;
 public class DatabaseLoader implements CommandLineRunner {
 
 	private final UserRepository repository;
+	//private final PetRepository petRepository;
 
 	@Autowired
-	public DatabaseLoader(UserRepository repository) {
+	public DatabaseLoader(UserRepository repository) {//, PetRepository petRepository) {
 		this.repository = repository;
+		//this.petRepository = petRepository;
 	}
 
 	@Override
 	public void run(String... strings) throws Exception {
 		//add a test user to the h2 database on startup
         this.repository.save(new User("Frodo", "Baggins", "ringbearer", "frodo@yahoo.com", "1234567",
-                                          "11 old hollow st", "", "USA", "hobbitville", "43154", "1102214325"));
+										  "11 old hollow st", "", "USA", "hobbitville", "43154", "1102214325"));
+		//this.petRepository.save(new Pet("Spring", "Cat", 5, "hmkiesel"));
 	}
 }
