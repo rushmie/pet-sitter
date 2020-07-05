@@ -20,7 +20,7 @@ const Router = (
     </div>
   </BrowserRouter>
 );
-const PetSitterApp = () => (<Router><App/></Router>);
+//const PetSitterApp = () => (<Router><App/></Router>);
 //render Routes to the root div in index.html
 ReactDOM.render(Router,
   document.getElementById('root')

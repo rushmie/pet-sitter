@@ -77,3 +77,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Getting Started on Windows:
+Follow instructions here: https://makandracards.com/reactjs-quick/52419-install-reactjs-windows
+npm install
